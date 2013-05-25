@@ -1,4 +1,4 @@
 
 = Astrolabe-rb
 
-Calculate the positions of celestial bodies via libnova
+Calculates various celestial object positions and transits suitable for astrological analysis.
