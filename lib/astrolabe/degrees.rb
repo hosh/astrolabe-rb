@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 require 'rlet'
 require 'rlet/lazy_options'
 
@@ -27,6 +28,10 @@ module Astrolabe
 
     def -@
       Astrolabe::Degrees.new(-degrees, -minutes, -seconds).normalized
+    end
+
+    def inspect
+      "#{degrees}\u00B0 #{minutes}'#{seconds}\""
     end
 
     # 29 0'0" < 30 0'0"
