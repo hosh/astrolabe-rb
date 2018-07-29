@@ -13,10 +13,11 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = ">= 1.3.6"
   s.rubyforge_project         = "astrolabe-rb"
 
-  s.add_dependency "libnova-ffi"
-  s.add_dependency "thor"
   s.add_dependency "rlet"
-  s.add_dependency "ffi"
+
+  # s.add_dependency "libnova-ffi"
+  # s.add_dependency "thor"
+  # s.add_dependency "ffi"
 
   s.add_development_dependency "rspec"
 
