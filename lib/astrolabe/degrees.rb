@@ -10,9 +10,9 @@ module Astrolabe
     attr_reader :degrees, :minutes, :seconds
 
     def initialize(degrees, minutes = 0, seconds = 0)
-      self.degrees = degrees
-      self.minutes = minutes
-      self.seconds = seconds
+      @degrees = degrees
+      @minutes = minutes
+      @seconds = seconds
     end
 
     def +(x)
@@ -56,12 +56,12 @@ module Astrolabe
     end
 
     # Intermediate
-    let(:normalized_degrees) { (raw_degrees.to_i + extra_degrees) % 360 }
-    let(:normalized_minutes) { (raw_minutes.to_i + extra_minutes) % 60 }
-    let(:normalized_seconds) { raw_second.to_i % 60 }
+    let(:normalized_degrees) { (degrees.to_i + extra_degrees) % 360 }
+    let(:normalized_minutes) { (minutes.to_i + extra_minutes) % 60 }
+    let(:normalized_seconds) { seconds.to_i % 60 }
 
-    let(:extra_degrees)      { (raw_minutes.to_i + extra_minutes) / 60 }
-    let(:extra_minutes)      { raw_second.to_i / 60 }
+    let(:extra_degrees)      { (minutes.to_i + extra_minutes) / 60 }
+    let(:extra_minutes)      { seconds.to_i / 60 }
 
     private
 
