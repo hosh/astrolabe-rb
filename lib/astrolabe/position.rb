@@ -7,9 +7,7 @@ module Astrolabe
     include RLet::LazyOptions
 
     # Inputs
-    let(:raw_degrees) { options[:degrees] }
-    let(:raw_minutes) { options[:minutes] }
-    let(:raw_seconds) { options[:seconds] }
+    let(:degrees) { Astrolabe::Degrees.new(options[:degrees], options[:minutes], options[:seconds]) }
 
     # Outputs
 

@@ -15,12 +15,12 @@ module Astrolabe
       pisces:      330
     }.freeze
 
-    class << self
-      SIGN.each do |sign, start_degree|
-        define_method(sign) do |degrees = 0, minutes = 0, seconds = 0|
-          Astrolabe::Position.new(degrees: start_degree + degrees, minutes: minutes, seconds: seconds)
-        end
-      end
-    end
+    #class << self
+    #  SIGNS.each do |sign, start_degree|
+    #    define_method(sign) do |degrees = 0, minutes = 0, seconds = 0|
+    #      Astrolabe::Position.new(degrees: start_degree + degrees, minutes: minutes, seconds: seconds)
+    #    end
+    #  end
+    #end
   end
 end
